@@ -1,4 +1,3 @@
-﻿  TU_DLIP.cpp
-  DLIP_Tutorial_C++_main.cpp
-C:\Users\AnChangMin\source\repos\GithubDesktop\DLIP\src\DLIP_TU1\DLIP_TU1\DLIP_Tutorial_C++_main.cpp(1,10): fatal error C1083: 포함 파일을 열 수 없습니다. 'TU_DLIP.h': No such file or directory
-  코드를 생성하고 있습니다...
+﻿  DLIP_Tutorial_C++_main.cpp
+C:\Users\AnChangMin\source\repos\GithubDesktop\DLIP\src\DLIP_TU1\DLIP_TU1\DLIP_Tutorial_C++_main.cpp(27,13): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  DLIP_TU1.vcxproj -> C:\Users\AnChangMin\source\repos\GithubDesktop\DLIP\src\DLIP_TU1\Debug\DLIP_TU1.exe
