@@ -1,0 +1,22 @@
+DarkLabel 가이드
+
+1. 1. darknet yolo로 바꾸어야 하고, box+Label로 변경!
+넘어갈 때 방향키
+우클릭: 최근 것 지우기
+또는 전체 라벨 지우기(set begin)
+shift 우클릭! 하나씩 지울 수 있다.
+GT Clear 누르면 지정 부분 라벨링 가능
+
+
+
+person = suv
+bicycle = truck
+car = car
+** yolo v5 -> data -> coco128.yaml 복사본 -> 이름바꿈 -> nc와 그 이름 바꾸면 됨
+
+
+space로 누르면 자동으로 추적
+
+GT Save: 
+
+절대 경로: yolov5->data -> dataset -> 각 이름

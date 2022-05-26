@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32228.343
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LAB1_Grayscale_Image_Segment", "LAB1_Grayscale_Image_Segment\LAB1_Grayscale_Image_Segment.vcxproj", "{DAC17AE2-A780-4A18-819C-34AD35B43BEF}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "LAB2_Facial_Temperature_Measurement_with_IR_Image", "LAB2_Facial_Temperature_Measurement_with_IR_Image\LAB2_Facial_Temperature_Measurement_with_IR_Image.vcxproj", "{479F3C38-96B6-482B-A6CB-7C35657476A2}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Midterm_21700421_Changmin", "Midterm_21700421_Changmin\Midterm_21700421_Changmin.vcxproj", "{C2B28EF2-A220-40BE-A8AF-7478EAB12F36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DAC17AE2-A780-4A18-819C-34AD35B43BEF}.Debug|x64.ActiveCfg = Debug|x64
+		{DAC17AE2-A780-4A18-819C-34AD35B43BEF}.Debug|x64.Build.0 = Debug|x64
+		{DAC17AE2-A780-4A18-819C-34AD35B43BEF}.Debug|x86.ActiveCfg = Debug|Win32
+		{DAC17AE2-A780-4A18-819C-34AD35B43BEF}.Debug|x86.Build.0 = Debug|Win32
+		{DAC17AE2-A780-4A18-819C-34AD35B43BEF}.Release|x64.ActiveCfg = Release|x64
+		{DAC17AE2-A780-4A18-819C-34AD35B43BEF}.Release|x64.Build.0 = Release|x64
+		{DAC17AE2-A780-4A18-819C-34AD35B43BEF}.Release|x86.ActiveCfg = Release|Win32
+		{DAC17AE2-A780-4A18-819C-34AD35B43BEF}.Release|x86.Build.0 = Release|Win32
+		{479F3C38-96B6-482B-A6CB-7C35657476A2}.Debug|x64.ActiveCfg = Debug|x64
+		{479F3C38-96B6-482B-A6CB-7C35657476A2}.Debug|x64.Build.0 = Debug|x64
+		{479F3C38-96B6-482B-A6CB-7C35657476A2}.Debug|x86.ActiveCfg = Debug|Win32
+		{479F3C38-96B6-482B-A6CB-7C35657476A2}.Debug|x86.Build.0 = Debug|Win32
+		{479F3C38-96B6-482B-A6CB-7C35657476A2}.Release|x64.ActiveCfg = Release|x64
+		{479F3C38-96B6-482B-A6CB-7C35657476A2}.Release|x64.Build.0 = Release|x64
+		{479F3C38-96B6-482B-A6CB-7C35657476A2}.Release|x86.ActiveCfg = Release|Win32
+		{479F3C38-96B6-482B-A6CB-7C35657476A2}.Release|x86.Build.0 = Release|Win32
+		{C2B28EF2-A220-40BE-A8AF-7478EAB12F36}.Debug|x64.ActiveCfg = Debug|x64
+		{C2B28EF2-A220-40BE-A8AF-7478EAB12F36}.Debug|x64.Build.0 = Debug|x64
+		{C2B28EF2-A220-40BE-A8AF-7478EAB12F36}.Debug|x86.ActiveCfg = Debug|Win32
+		{C2B28EF2-A220-40BE-A8AF-7478EAB12F36}.Debug|x86.Build.0 = Debug|Win32
+		{C2B28EF2-A220-40BE-A8AF-7478EAB12F36}.Release|x64.ActiveCfg = Release|x64
+		{C2B28EF2-A220-40BE-A8AF-7478EAB12F36}.Release|x64.Build.0 = Release|x64
+		{C2B28EF2-A220-40BE-A8AF-7478EAB12F36}.Release|x86.ActiveCfg = Release|Win32
+		{C2B28EF2-A220-40BE-A8AF-7478EAB12F36}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27905458-966E-42B3-A00C-75715DBED463}
+	EndGlobalSection
+EndGlobal

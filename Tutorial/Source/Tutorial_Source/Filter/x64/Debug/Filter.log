@@ -1,0 +1,3 @@
+﻿  filter_demo.cpp
+C:\Users\AnChangMin\source\repos\GithubDesktop\DLIP\Tutorial\Source\Tutorial_Source\Filter\filter_demo.cpp(14,1): warning C4326: 'main'의 반환 형식이 'int'이어야 하는데 'void'입니다.
+  Filter.vcxproj -> C:\Users\AnChangMin\source\repos\GithubDesktop\DLIP\Tutorial\Source\Tutorial_Source\x64\Debug\Filter.exe

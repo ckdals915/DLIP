@@ -1,0 +1,32 @@
+﻿  LAB2_main.cpp
+C:\Users\AnChangMin\source\repos\GithubDesktop\DLIP\src\LAB\LAB\LAB2_Facial_Temperature_Measurement_with_IR_Image\LAB2_main.cpp(83,11): warning C4244: '=': '_Tp'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=double
+          ]
+C:\Users\AnChangMin\source\repos\GithubDesktop\DLIP\src\LAB\LAB\LAB2_Facial_Temperature_Measurement_with_IR_Image\LAB2_main.cpp(84,11): warning C4244: '=': '_Tp'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=double
+          ]
+C:\Users\AnChangMin\source\repos\GithubDesktop\DLIP\src\LAB\LAB\LAB2_Facial_Temperature_Measurement_with_IR_Image\LAB2_main.cpp(89,11): warning C4244: '=': '_Tp'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=double
+          ]
+C:\Users\AnChangMin\source\repos\GithubDesktop\DLIP\src\LAB\LAB\LAB2_Facial_Temperature_Measurement_with_IR_Image\LAB2_main.cpp(90,11): warning C4244: '=': '_Tp'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=double
+          ]
+C:\Users\AnChangMin\source\repos\GithubDesktop\DLIP\src\LAB\LAB\LAB2_Facial_Temperature_Measurement_with_IR_Image\LAB2_main.cpp(94,11): warning C4244: '=': '_Tp'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=double
+          ]
+C:\Users\AnChangMin\source\repos\GithubDesktop\DLIP\src\LAB\LAB\LAB2_Facial_Temperature_Measurement_with_IR_Image\LAB2_main.cpp(95,11): warning C4244: '=': '_Tp'에서 'int'(으)로 변환하면서 데이터가 손실될 수 있습니다.
+          with
+          [
+              _Tp=double
+          ]
+  LAB2_Facial_Temperature_Measurement_with_IR_Image.vcxproj -> C:\Users\AnChangMin\source\repos\GithubDesktop\DLIP\src\LAB\LAB\x64\Debug\LAB2_Facial_Temperature_Measurement_with_IR_Image.exe
