@@ -1,9 +1,8 @@
 '''
 * *****************************************************************************
 * @author   ChangMin An, JiWoo Yang
-* @Mod      2022 - 06 - 13
-* @brief   DLIP LAB: Gym Accident Prevention System
-* @Version   
+* @Mod      2022 - 06 - 17
+* @brief   DLIP LAB: Gym Accident Prevention System 
 * *****************************************************************************
 '''
 #===============================================#
@@ -11,7 +10,6 @@
 #===============================================#
 import tensorflow as tf
 import numpy as np
-from matplotlib import pyplot as plt
 import cv2 as cv
 from cv2 import *
 from cv2.cv2 import *
@@ -44,7 +42,7 @@ RIGHT_ELBOW         = 8
 LEFT_WRIST          = 9
 RIGHT_WRIST         = 10
 
-# Definition of boty edges
+# Definition of body edges
 EDGES = {
     (LEFT_SHOULDER,LEFT_ELBOW): 'm',
     (LEFT_ELBOW,LEFT_WRIST): 'm',
@@ -54,47 +52,38 @@ EDGES = {
 }
 
 # Thresholding
-CONFIDENCE_THRESHOLD    = 0.2
-CORRECT_RECOGNIGION     = 5
+CONFIDENCE_THRESHOLD    = 0.2   # For minimum confidence of output
+CORRECT_RECOGNIGION     = 5     # 
 
-START_THRESHOLD         = 0.3
-START_COUNT_THRESH      = 30
+START_THRESHOLD         = 0.3   # For value of good pose
+START_COUNT_THRESH      = 30    # For start counting
 
-ALLOWABLE_LOWER         = 0.9
-ALLOWABLE_UPPER         = 1.1
+# User input
+inputCount      = 11 # For user input
 
-# System flag
-system_Flag     = False
-start_Flag      = False
-finish_Flag     = False
-tk_Flag         = False
+# Flag
+system_Flag     = False                        # For start system
+start_Flag      = False                        # For start counting process
+finish_Flag     = False                        # For finish workout
+tk_Flag         = False                        # For new user input
+up_down_Flag    = [False, False, False, False] # 0: down_Flag, 1: up_Flag, 2: left_down_Flag, 3: right_down_Flag
 
-# For workout count
-# 0: down_Flag, 1: up_Flag, 2: left_down_Flag, 3: right_down_Flag
-up_down_Flag    = [False, False, False, False]
+# For counting
+counting_List   = [0, 0, 0, 0, 0.0, 0.0, 0] # 0: Good count, 1: bad count, 2: left_E_ystack, 3: right_E_ystack, 4: left_E_avg, 5: right_E_avg 6: count_frame
+start_Count     = 0                         # For starting setting
 
-# 0: Good count, 1: bad count, 2: left_E_ystack, 3: right_E_ystack, 4: left_E_avg, 5: right_E_avg 6: count_frame
-counting_List   = [0, 0, 0, 0, 0.0, 0.0, 0]
-
-# For starting setting
 # 0:set Count, 1: startCount, 2: userSet
-start_Count = 0
 offset_Text = ""
 
-# Balance_List
-# 0: balance, 1: good, 2: bad)
-balance_List = [0.0, 10.0, 0.0]
+# For Balance
+balance_List = [0.0, 10.0, 0.0] # 0: balance, 1: good, 2: bad
 
-# Counting workout
-inputCount          = 11
-count_Good_Workout   = 0
-count_Bed_Workout    = 0
 
 # Frame count
 frame_Num           = 0         # for processing
-frame_Num2          = 0         # for final result
 position_FrameList  = [0, 0]    # 0: worst / 1: Best
 
+# Video naming
 Video = "DEMO.mp4"
 
 #===============================================#
@@ -163,7 +152,7 @@ def Start_Postion_Adjustment(_frame, _poseBuf, _startCount, _startFlag,  _offset
                 # _skeletoneFlag = True
                 if slope_offset < START_THRESHOLD:
                     _startCount += 1
-                    _offsetText = "Collect Position! Stop it"
+                    _offsetText = "Correct Position! Stop it"
                 elif slope_offset >= START_THRESHOLD:
                     if slope_right > slope_left:
                         _offsetText = "Move your hands to the RIGHT"
@@ -261,7 +250,7 @@ def Count_Workout(_frame, _shaped, _inputCount, _finishFlag, _countList, _balanc
 # Reset all parameter
 def ResetPram():
     # System flag
-    global system_Flag, start_Flag, finish_Flag, up_down_Flag, counting_List, start_Count, offset_Text, balance_List, count_Good_Workout, count_Bed_Workout, frame_Num, inputCount, frame_Num2, position_FrameList
+    global system_Flag, start_Flag, finish_Flag, up_down_Flag, counting_List, start_Count, offset_Text, balance_List, frame_Num, inputCount, frame_Num2, position_FrameList
 
     # System flag
     system_Flag     = False
@@ -284,13 +273,7 @@ def ResetPram():
     # 0: balance, 1: good, 2: bad)
     balance_List = [0.0, 10.0, 0.0]
 
-    # Counting workout
-    count_Good_Workout   = 0
-    count_Bed_Workout    = 0
-
     # Frame count
-    frame_Num           = 0         # for processing
-    frame_Num2          = 0         # for final result
     position_FrameList  = [0, 0]    # 0: worst / 1: Best
 #===============================================#
 #                   Show Text                   #
@@ -365,7 +348,12 @@ exit_button = Button(tk, text='Exit', bg='black', fg='white', command=tk.destroy
 tk.mainloop()
 
 # Open the Video & Recording Video Configuration
-cap = cv.VideoCapture(Video)
+# cv.VideoCaputure(0) -> notebook cam
+# cv.VideoCaputure(1) -> another cam connecting with my notebook
+# cv.VideoCapture(filename.mp4) -> Video
+cap = cv.VideoCapture("DEMO.mp4")
+
+#
 w = round(cap.get(CAP_PROP_FRAME_WIDTH))
 h = round(cap.get(CAP_PROP_FRAME_HEIGHT))
 fps = cap.get(CAP_PROP_FPS)
@@ -373,11 +361,12 @@ fourcc = VideoWriter_fourcc(*'DIVX')
 out = VideoWriter('output.avi', fourcc, fps, (w,h))
 delay = round(1000/fps)
 
-if (cap.isOpened() == False):
+if (cap.isOpened() == False): # if there is no video we can open, print error
   print("Not Open the VIDEO")
 
 #================== While Loop =================#
 while cap.isOpened():
+    # When you press the 'r' botton -> restart
     if tk_Flag == True:
         tk = Tk()
         tk.title('Input Exercise Count')
@@ -395,6 +384,7 @@ while cap.isOpened():
         tk_Flag = False
 
     frame_Num += 1
+
     # Start Window Time
     startTime = cv.getTickCount()
 
@@ -405,18 +395,19 @@ while cap.isOpened():
         break
 
     # Reshape image
-    frame = resize(frame, dsize = (1080, 1080), interpolation=INTER_LINEAR)
+    frame       = resize(frame, dsize = (1080, 1080), interpolation=INTER_LINEAR)
     img         = frame.copy()
     img         = tf.image.resize_with_pad(np.expand_dims(img, axis=0), 192, 192)
     input_image = tf.cast(img, dtype=tf.float32)
     
     #Setup input and Output
-    input_details   = interpreter.get_input_details()
-    output_details  = interpreter.get_output_details()
+    input_details   = interpreter.get_input_details()   # receive information of input tensor
+    output_details  = interpreter.get_output_details()   # receive information of output tensor
     
-    # Make predictions
+    # input to model
     interpreter.set_tensor(input_details[0]['index'], np.array(input_image))
     interpreter.invoke()
+    # Get output to model
     keypoints_with_scores = interpreter.get_tensor(output_details[0]['index'])
 
     # =================== START POINT =================== #
@@ -438,7 +429,7 @@ while cap.isOpened():
         # draw skeleton
         Draw_Connecting(frame, shaped, EDGES, CONFIDENCE_THRESHOLD)
             
-        # Start processing
+        # Start count processing
         if start_Flag == True and finish_Flag == False:
             balance_List[0] = Calculate_Balance(shaped, balance_List[0])
             finish_Flag, counting_List, balance_List, up_down_Flag, counting_List[6] = Count_Workout(frame, shaped, inputCount, finish_Flag, counting_List, balance_List, up_down_Flag)
@@ -474,7 +465,6 @@ while cap.isOpened():
         if finish_Flag == False:
             ResetPram()
         else:
-            
             break
         # Press Esc to Exit, Stop Video to 's' 
         k = cv.waitKey(5) & 0xFF
@@ -497,7 +487,7 @@ while cap.isOpened():
 
         cv.imshow('MoveNet Lightning', frame)
 
-    # Record Video
+    # # Record Video
     out.write(frame)
 
 cap.release()
