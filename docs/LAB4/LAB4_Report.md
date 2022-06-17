@@ -58,13 +58,13 @@ The model used in this lab is YOLO V5m6. The speed and mAP for this model are as
 
 
 
-## III. Flow Chart
+## IV. Flow Chart
 
 <img src="FlowChart.jpg" style="zoom:90%;" />
 
 
 
-## IV. Procedure
+## V. Procedure
 
 ### 1. Setup
 
@@ -425,7 +425,7 @@ f.close()
 
 
 
-## V. Analysis
+## VI. Analysis
 
 #### 1. Region of Interests
 
@@ -437,19 +437,19 @@ It can be seen that a person is recognized as a car or a truck, and a bounding b
 
 
 
-## VI. Result Video
+## VII. Result Video
 
 [Click Demo Video](https://youtu.be/UxfRx_APDns)
 
 
 
-## VII. Conclusion
+## VIII. Conclusion
 
 In this experiment, object detection is implemented using the pretrained model provided by YOLO V5. Through this, it is possible to draw the bounding box of each object, and the number of detected cars can be determined. Through this, it is possible to immediately analyze the parking space of the car, and through this, it is possible to expect to prevent a crowded situation in the parking lot. It can be seen that improvement should be made through appropriate model selection and additional learning for each situation.
 
 
 
-## VIII. Appendix
+## IX. Appendix
 
 ### main.py
 
