@@ -84,7 +84,7 @@ frame_Num           = 0         # for processing
 position_FrameList  = [0, 0]    # 0: worst / 1: Best
 
 # Video naming
-Video = "DEMO.mp4"
+Video = "Exercise_ChangMin2.mp4"
 
 #===============================================#
 #              Definition Function              #
@@ -351,7 +351,7 @@ tk.mainloop()
 # cv.VideoCaputure(0) -> notebook cam
 # cv.VideoCaputure(1) -> another cam connecting with my notebook
 # cv.VideoCapture(filename.mp4) -> Video
-cap = cv.VideoCapture("DEMO.mp4")
+cap = cv.VideoCapture(Video)
 
 #
 w = round(cap.get(CAP_PROP_FRAME_WIDTH))

@@ -615,6 +615,8 @@ exit_button = Button(tk, text='Exit', bg='black', fg='white', command=tk.destroy
 tk.mainloop()
 ```
 
+<img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/tkinter.jpg?raw=true" style="zoom:70%;" />
+
 
 
 ##### Open the Video & Recording Video Configuration
@@ -820,6 +822,16 @@ cv.destroyAllWindows()
 out.release()
 ```
 
+|                             Left                             |                          Bad Count                           |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Exercise_Unbalance_Left.jpg?raw=true" style="zoom:60%;" /> | <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Exercise_Unbalance_Left2.jpg?raw=true" style="zoom:60%;" /> |
+
+|                            Right                             |                          Bad Count                           |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Exercise_Unbalance_Right.jpg?raw=true" style="zoom:60%;" /> | <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Exercise_Unbalance_Right2.jpg?raw=true" style="zoom:60%;" /> |
+
+
+
 
 
 ### 8. Show the result of workout
@@ -889,17 +901,69 @@ if finish_Flag == True: # When finish flag is on
 
 ## V. Result
 
-### 1. Starting Exercise
+### 1. Adjust Correct Starting Position
 
-|                          Adjust                          |                       Complete                        |
-| :------------------------------------------------------: | :---------------------------------------------------: |
-| <img src="Segmentation_Success.jpg" style="zoom:60%;" /> | <img src="Segmentation_Fail.jpg" style="zoom:60%;" /> |
+|                            Adjust                            |                           Complete                           |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Starting_Offset_Right.jpg?raw=true" style="zoom:60%;" /> | <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Starting_Offset_Correct.jpg?raw=true" style="zoom:60%;" /> |
 
 
+
+### 2. Exercising
+
+|                         Contraction                          |                          Relaxation                          |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Exercise_Contraction.jpg?raw=true" style="zoom:60%;" /> | <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Exercise_Relaxation.jpg?raw=true" style="zoom:60%;" /> |
+
+
+
+### 3. Unbalance
+
+|                             Left                             |                            Right                             |
+| :----------------------------------------------------------: | :----------------------------------------------------------: |
+| <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Exercise_Unbalance_Left.jpg?raw=true" style="zoom:60%;" /> | <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Exercise_Unbalance_Right.jpg?raw=true" style="zoom:60%;" /> |
+
+
+
+### 4. Show Result
+
+<img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/Finish.jpg?raw=true" style="zoom:80%;" />
 
 
 
 ## VI. Evaluation
+
+Since we used the pre-trained model, we analyzed the algorithm we implemented, not the analysis of the model itself. The adjust correct starting position part and the experimenting part were largely divided and analyzed.
+
+* **Adjust Correct Starting Position**
+
+  For evaluation, another Lat-Pull Down machine tested "Adjust Correct Starting Position" 20 times per person and 40 times in total. In this case, Positive means Correct Position, and Negative means a state in which movement to right or left is required. Accordingly, the heat map is as follows, and based on this, Accuracy, Precision, and Recall are analyzed.
+
+  <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Adjust_Correct_Starting_Position_HeatMap.jpg?raw=true" style="zoom:60%;" />
+
+  **- Accuracy: 87.5%**
+
+  **- Precision: 94.1%**
+
+  **- Recall: 80.0%**
+
+  Looking at the above results, Recall is lowered, which means that negative is frequently recognized (FN) when positive. In other words, it can be seen that the threshold value should be adjusted so that it can be clearly recognized as positive when it is positive.
+
+  
+
+* **Workout Counting**
+
+  This time, an experiment on "Workout Counting" is conducted 20 times per person, 5 sets, and a total of 200 times. At this time, Positive means exercising in the right posture, and Negative means exercising in the wrong posture. The heat map accordingly is as follows, and based on this, Accuracy, Precision, and Recall are analyzed.
+
+  <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Workout_Counting_HeatMap.jpg?raw=true" style="zoom:60%;" />
+
+  **- Accuracy: 94.0%**
+
+  **- Precision: 89.3%**
+
+  **- Recall: 100.0%**
+
+  Looking at the above results, the precision is lowered, which means that there are many cases (FP) that are perceived as positive when negative. In the experiment, a mirror is present and the precision is lowered due to the recognition of the mirror or the body of an outsider. In other words, when using this program, it should be executed in an environment where there is nothing else that can be recognized as a person other than the surrounding me.
 
 
 
@@ -909,7 +973,7 @@ if finish_Flag == True: # When finish flag is on
 
 * [Pose Estimation with Fastest Deep Learning Model Tutorial](https://youtu.be/SSW9LzOJSus)
 
-
+* [Installation Guide - Y.K.Kim Deep-Learning-Image-Processing Installation Guide](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
 
 
 
