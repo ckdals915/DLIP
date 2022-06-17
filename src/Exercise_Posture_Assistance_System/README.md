@@ -14,7 +14,7 @@
 
 In this LAB, we start a project that tells us how to correct our posture in real time when we exercise at the gym. This program is basically limited to the "lat-pull-down" movement. These days, as interest in health increases due to COVID-19, interest in health increases, and people who exercise alone also increase. However, if we exercise alone, it is difficult to recognize whether you are exercising in an accurate posture, and as a result, a problem that is prone to muscle imbalance is found. To solve this problem, we try to create system that identifies each joint of a person and measures the balance according to both slopes of the upper body joint to give feedback on the balance between the two forces. The tutorial is run by visual studio code(VS code), loading web cam or video source, and processing images in real time using OpenCV.
 
-<img src="unbalance.jpg" style="zoom:80%;" />
+<img src="picture/unbalance.jpg" style="zoom:80%;" />
 
 
 
@@ -37,7 +37,7 @@ In this LAB, we start a project that tells us how to correct our posture in real
 
 ## III. Flow Chart
 
-<img src="DLIP_flowchart.jpg" style="zoom:90%;" />
+<img src="picture/DLIP_flowchart.jpg" style="zoom:90%;" />
 
 
 
@@ -57,7 +57,7 @@ First, installation is carried out using Anaconda Prompt to build the environmen
 
 Click here [Download the installer on window ](https://www.anaconda.com/products/distribution#Downloads) to Windows 64-Bit Graphical Installer
 
-<img src="Anaconda.jpg" style="zoom:50%;" />
+<img src="picture/Anaconda.jpg" style="zoom:50%;" />
 
 Follow the following steps
 
@@ -67,7 +67,7 @@ Follow the following steps
 * Do NOT add Anaconda to my PATH environment variable
 * Check to register Anaconda as your default Python.
 
-<img src="Anaconda_1.jpg" style="zoom:80%;" />
+<img src="picture/Anaconda_1.jpg" style="zoom:80%;" />
 
 #### 2-2. Install Python
 
@@ -77,7 +77,7 @@ Python is already installed by installing Anaconda. But, we will make a virtual 
 
 * Open Anaconda Prompt(admin mode)
 
-<img src="Anaconda_prompt.jpg" style="zoom:50%;" />
+<img src="picture/Anaconda_prompt.jpg" style="zoom:50%;" />
 
 * First, update **conda** and **pip** (If the message "Press Y or N" appears, press Y and Enter key)
 
@@ -89,7 +89,7 @@ conda update -n base -c defaults conda
 python -m pip install --upgrade pip
 ```
 
-<img src="pip_update.jpg" style="zoom:60%;" />
+<img src="picture/pip_update.jpg" style="zoom:60%;" />
 
 * Then, Create virtual environment for Python 3.9, Name the $ENV as `py39`. If you are in base, enter `conda activate py39`
 
@@ -98,7 +98,7 @@ python -m pip install --upgrade pip
   conda create -n py39 python=3.9.12
   ```
 
-  <img src="python39_install.jpg" style="zoom:80%;" />
+  <img src="picture/python39_install.jpg" style="zoom:80%;" />
 
   
 
@@ -109,7 +109,7 @@ python -m pip install --upgrade pip
 conda activate py39
 ```
 
-<img src="py39.jpg" style="zoom:80%;" />
+<img src="picture/py39.jpg" style="zoom:80%;" />
 
 
 
@@ -150,7 +150,7 @@ pip install tensorflow==2.9.1
 
 * Download MoveNet model: [TFLite model link](https://tfhub.dev/google/lite-model/movenet/singlepose/lightning/3) **(Must download in local folder (include main.py))**
 
-<img src="model.jpg" style="zoom:70%;" />
+<img src="picture/model.jpg" style="zoom:70%;" />
 
 
 
