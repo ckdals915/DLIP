@@ -6,7 +6,7 @@
 
 **Github**: 						[Link](https://github.com/ckdals915/DLIP/tree/main/src/Exercise_Posture_Assistance_System)
 
-**Demo Video**: 		  	[Link](https://youtu.be/UxfRx_APDns)
+**Demo Video**: 		  	[Link](https://youtu.be/EDRfXOtn15Q)
 
 
 
@@ -14,7 +14,9 @@
 
 In this LAB, we start a project that tells us how to correct our posture in real time when we exercise at the gym. This program is basically limited to the "lat-pull-down" movement. These days, as interest in health increases due to COVID-19, interest in health increases, and people who exercise alone also increase. However, if we exercise alone, it is difficult to recognize whether you are exercising in an accurate posture, and as a result, a problem that is prone to muscle imbalance is found. To solve this problem, we try to create system that identifies each joint of a person and measures the balance according to both slopes of the upper body joint to give feedback on the balance between the two forces. The tutorial is run by visual studio code(VS code), loading web cam or video source, and processing images in real time using OpenCV.
 
-<img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/unbalance.jpg?raw=true" style="zoom:80%;" />
+* **Demo**
+
+<img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/Result_Video.gif?raw=true?raw=true?raw=true" style="zoom:80%;" />
 
 
 
@@ -615,7 +617,7 @@ exit_button = Button(tk, text='Exit', bg='black', fg='white', command=tk.destroy
 tk.mainloop()
 ```
 
-<img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/tkinter.jpg?raw=true" style="zoom:70%;" />
+<img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/tkinter.jpg?raw=true" style="zoom:100%;" />
 
 
 
@@ -927,7 +929,7 @@ if finish_Flag == True: # When finish flag is on
 
 ### 4. Show Result
 
-<img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/Finish.jpg?raw=true" style="zoom:80%;" />
+<img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Finish.jpg?raw=true" style="zoom:80%;" />
 
 
 
@@ -939,7 +941,7 @@ Since we used the pre-trained model, we analyzed the algorithm we implemented, n
 
   For evaluation, another Lat-Pull Down machine tested "Adjust Correct Starting Position" 20 times per person and 40 times in total. In this case, Positive means Correct Position, and Negative means a state in which movement to right or left is required. Accordingly, the heat map is as follows, and based on this, Accuracy, Precision, and Recall are analyzed.
 
-  <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Adjust_Correct_Starting_Position_HeatMap.jpg?raw=true" style="zoom:60%;" />
+  <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Adjust_Correct_Starting_Position_HeatMap.jpg?raw=true" style="zoom:120%;" />
 
   **- Accuracy: 87.5%**
 
@@ -955,7 +957,7 @@ Since we used the pre-trained model, we analyzed the algorithm we implemented, n
 
   This time, an experiment on "Workout Counting" is conducted 20 times per person, 5 sets, and a total of 200 times. At this time, Positive means exercising in the right posture, and Negative means exercising in the wrong posture. The heat map accordingly is as follows, and based on this, Accuracy, Precision, and Recall are analyzed.
 
-  <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Workout_Counting_HeatMap.jpg?raw=true" style="zoom:60%;" />
+  <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Workout_Counting_HeatMap.jpg?raw=true" style="zoom:120%;" />
 
   **- Accuracy: 94.0%**
 
@@ -963,7 +965,7 @@ Since we used the pre-trained model, we analyzed the algorithm we implemented, n
 
   **- Recall: 100.0%**
 
-  Looking at the above results, the precision is lowered, which means that there are many cases (FP) that are perceived as positive when negative. In the experiment, a mirror is present and the precision is lowered due to the recognition of the mirror or the body of an outsider. In other words, when using this program, it should be executed in an environment where there is nothing else that can be recognized as a person other than the surrounding me.
+  Looking at the above results, the precision is lowered, which means that there are many cases (FP) that are perceived as positive when negative. In the experiment, a mirror is present and the precision is lowered due to the recognition of the person in the mirror. In other words, when using this program, it should be executed in an environment where there is nothing else that can be recognized as a person other than the surrounding me.
 
 
 
