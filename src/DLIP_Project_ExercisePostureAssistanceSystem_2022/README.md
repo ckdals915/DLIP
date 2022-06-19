@@ -6,7 +6,7 @@
 
 **Github**: 						[Link](https://github.com/ckdals915/DLIP/tree/main/src/Exercise_Posture_Assistance_System)
 
-**Demo Video**: 		  	[Link](https://youtu.be/EDRfXOtn15Q)
+**Demo Video**: 		  	[Link](https://youtu.be/Ih_6EVLuCNE)
 
 
 
@@ -17,8 +17,6 @@ In this LAB, we start a project that tells us how to correct our posture in real
 * **Demo**
 
 <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/Result_Video.gif?raw=true?raw=true?raw=true" style="zoom:80%;" />
-
-
 
 ## II. Requirement
 
