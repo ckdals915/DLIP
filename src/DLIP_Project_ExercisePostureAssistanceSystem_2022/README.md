@@ -4,7 +4,7 @@
 
 **Name**:  						ChangMin An JiWoo Yang
 
-**Github**: 						[Link](https://github.com/ckdals915/DLIP/tree/main/src/Exercise_Posture_Assistance_System)
+**Github**: 						[Link](https://github.com/ckdals915/DLIP/tree/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022)
 
 **Demo Video**: 		  	[Link](https://youtu.be/Ih_6EVLuCNE)
 
@@ -16,7 +16,7 @@ In this LAB, we start a project that tells us how to correct our posture in real
 
 * **Demo**
 
-<img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/Result_Video.gif?raw=true?raw=true?raw=true" style="zoom:80%;" />
+<img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/Result_Video.gif?raw=true?raw=true?raw=true" style="zoom:80%;" />
 
 ## II. Requirement
 
@@ -37,7 +37,7 @@ In this LAB, we start a project that tells us how to correct our posture in real
 
 ## III. Flow Chart
 
-<img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/DLIP_flowchart.jpg?raw=true" style="zoom:90%;" />
+<img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/DLIP_flowchart.jpg?raw=true" style="zoom:90%;" />
 
 ## IV. Procedure
 
@@ -53,7 +53,7 @@ First, installation is carried out using Anaconda Prompt to build the environmen
 
 Click here [Download the installer on window ](https://www.anaconda.com/products/distribution#Downloads) to Windows 64-Bit Graphical Installer
 
-<img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Anaconda.jpg?raw=true" style="zoom:50%;" />
+<img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/Anaconda.jpg?raw=true" style="zoom:50%;" />
 
 Follow the following steps
 
@@ -63,7 +63,7 @@ Follow the following steps
 * Do NOT add Anaconda to my PATH environment variable
 * Check to register Anaconda as your default Python.
 
-<img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Anaconda_1.jpg?raw=true" style="zoom:80%;" />
+<img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/Anaconda_1.jpg?raw=true" style="zoom:80%;" />
 
 
 
@@ -75,7 +75,7 @@ Python is already installed by installing Anaconda. But, we will make a virtual 
 
 * Open Anaconda Prompt(admin mode)
 
-<img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Anaconda_prompt.jpg?raw=true" style="zoom:50%;" />
+<img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/Anaconda_prompt.jpg?raw=true" style="zoom:50%;" />
 
 
 
@@ -89,7 +89,7 @@ conda update -n base -c defaults conda
 python -m pip install --upgrade pip
 ```
 
-<img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/pip_update.jpg?raw=true" style="zoom:60%;" />
+<img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/pip_update.jpg?raw=true" style="zoom:60%;" />
 
 
 
@@ -100,7 +100,7 @@ python -m pip install --upgrade pip
 conda create -n py39 python=3.9.12
 ```
 
-<img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/python39_install.jpg?raw=true" style="zoom:80%;" />
+<img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/python39_install.jpg?raw=true" style="zoom:80%;" />
 
 
 
@@ -111,7 +111,7 @@ conda create -n py39 python=3.9.12
 conda activate py39
 ```
 
-<img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/py39.jpg?raw=true" style="zoom:80%;" />
+<img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/py39.jpg?raw=true" style="zoom:80%;" />
 
 
 
@@ -152,7 +152,7 @@ pip install tensorflow==2.9.1
 
 * Download MoveNet model: [TFLite model link](https://tfhub.dev/google/lite-model/movenet/singlepose/lightning/3) **(Must download in local folder (include main.py))**
 
-<img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/model.jpg?raw=true" style="zoom:70%;" />
+<img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/model.jpg?raw=true" style="zoom:70%;" />
 
 
 
@@ -615,7 +615,7 @@ exit_button = Button(tk, text='Exit', bg='black', fg='white', command=tk.destroy
 tk.mainloop()
 ```
 
-<img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/tkinter.jpg?raw=true" style="zoom:100%;" />
+<img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/tkinter.jpg?raw=true" style="zoom:100%;" />
 
 
 
@@ -824,11 +824,11 @@ out.release()
 
 |                             Left                             |                          Bad Count                           |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Exercise_Unbalance_Left.jpg?raw=true" style="zoom:60%;" /> | <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Exercise_Unbalance_Left2.jpg?raw=true" style="zoom:60%;" /> |
+| <img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/Exercise_Unbalance_Left.jpg?raw=true" style="zoom:60%;" /> | <img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/Exercise_Unbalance_Left2.jpg?raw=true" style="zoom:60%;" /> |
 
 |                            Right                             |                          Bad Count                           |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Exercise_Unbalance_Right.jpg?raw=true" style="zoom:60%;" /> | <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Exercise_Unbalance_Right2.jpg?raw=true" style="zoom:60%;" /> |
+| <img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/Exercise_Unbalance_Right.jpg?raw=true" style="zoom:60%;" /> | <img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/Exercise_Unbalance_Right2.jpg?raw=true" style="zoom:60%;" /> |
 
 
 
@@ -905,7 +905,7 @@ if finish_Flag == True: # When finish flag is on
 
 |                            Adjust                            |                           Complete                           |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Starting_Offset_Right.jpg?raw=true" style="zoom:60%;" /> | <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Starting_Offset_Correct.jpg?raw=true" style="zoom:60%;" /> |
+| <img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/Starting_Offset_Right.jpg?raw=true" style="zoom:60%;" /> | <img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/Starting_Offset_Correct.jpg?raw=true" style="zoom:60%;" /> |
 
 
 
@@ -913,7 +913,7 @@ if finish_Flag == True: # When finish flag is on
 
 |                         Contraction                          |                          Relaxation                          |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Exercise_Contraction.jpg?raw=true" style="zoom:60%;" /> | <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Exercise_Relaxation.jpg?raw=true" style="zoom:60%;" /> |
+| <img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/Exercise_Contraction.jpg?raw=true" style="zoom:60%;" /> | <img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/Exercise_Relaxation.jpg?raw=true" style="zoom:60%;" /> |
 
 
 
@@ -921,13 +921,13 @@ if finish_Flag == True: # When finish flag is on
 
 |                             Left                             |                            Right                             |
 | :----------------------------------------------------------: | :----------------------------------------------------------: |
-| <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Exercise_Unbalance_Left.jpg?raw=true" style="zoom:60%;" /> | <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Exercise_Unbalance_Right.jpg?raw=true" style="zoom:60%;" /> |
+| <img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/Exercise_Unbalance_Left.jpg?raw=true" style="zoom:60%;" /> | <img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/Exercise_Unbalance_Right.jpg?raw=true" style="zoom:60%;" /> |
 
 
 
 ### 4. Show Result
 
-<img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Finish.jpg?raw=true" style="zoom:80%;" />
+<img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/Finish.jpg?raw=true" style="zoom:80%;" />
 
 
 
@@ -939,7 +939,7 @@ Since we used the pre-trained model, we analyzed the algorithm we implemented, n
 
   For evaluation, another Lat-Pull Down machine tested "Adjust Correct Starting Position" 20 times per person and 40 times in total. In this case, Positive means Correct Position, and Negative means a state in which movement to right or left is required. Accordingly, the heat map is as follows, and based on this, Accuracy, Precision, and Recall are analyzed.
 
-  <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Adjust_Correct_Starting_Position_HeatMap.jpg?raw=true" style="zoom:120%;" />
+  <img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/Adjust_Correct_Starting_Position_HeatMap.jpg?raw=true" style="zoom:120%;" />
 
   **- Accuracy: 87.5%**
 
@@ -955,7 +955,7 @@ Since we used the pre-trained model, we analyzed the algorithm we implemented, n
 
   This time, an experiment on "Workout Counting" is conducted 20 times per person, 5 sets, and a total of 200 times. At this time, Positive means exercising in the right posture, and Negative means exercising in the wrong posture. The heat map accordingly is as follows, and based on this, Accuracy, Precision, and Recall are analyzed.
 
-  <img src="https://github.com/ckdals915/DLIP/blob/main/src/Exercise_Posture_Assistance_System/picture/Workout_Counting_HeatMap.jpg?raw=true" style="zoom:120%;" />
+  <img src="https://github.com/ckdals915/DLIP/blob/main/src/DLIP_Project_ExercisePostureAssistanceSystem_2022/picture/Workout_Counting_HeatMap.jpg?raw=true" style="zoom:120%;" />
 
   **- Accuracy: 94.0%**
 
