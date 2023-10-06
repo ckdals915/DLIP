@@ -85,13 +85,13 @@ import numpy as np
 
 ### 2. Installation
 
-#### 2-1. Without NVIDIA RTX 30 Series
+#### 2-1. Without NVIDIA RTX 30, 40 Series
 
 [Installation Guide](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
 
 
 
-#### 2-2. With NVIDIA RTX 30 Series
+#### 2-2. With NVIDIA RTX 30, 40 Series
 
 [Installation Guide](https://ykkim.gitbook.io/dlip/installation-guide/installation-guide-for-deep-learning)
 
@@ -116,10 +116,10 @@ Follow [How to install Driver](https://ykkim.gitbook.io/dlip/installation-guide/
 Install the following command by running Anaconda Prompt with administrator privileges.
 
 ```python
-# CUDA 11.3
+# CUDA 11.8(python 3.9, 3.11 possible)
 conda activate py39
-conda install -c anaconda cudatoolkit==11.3.1 cudnn seaborn jupyter
-conda install pytorch=1.10 torchvision torchaudio cudatoolkit=11.3 -c pytorch
+conda install -c anaconda cudatoolkit=11.8 cudnn seaborn jupyter
+conda install pytorch=2.1 torchvision torchaudio pytorch-cuda=11.8 -c pytorch -c nvidia
 pip install opencv-python torchsummary
 ```
 
